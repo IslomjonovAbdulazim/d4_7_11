@@ -71,7 +71,9 @@ class StartPage extends StatelessWidget {
                         SizedBox(width: 10),
                         Expanded(
                           child: CupertinoButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.to(MainPage());
+                            },
                             child: Container(),
                           ),
                         ),
