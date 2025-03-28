@@ -2,7 +2,6 @@ import 'package:d4_7_11/pages/main_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class StartPage extends StatelessWidget {
   const StartPage({super.key});
@@ -50,34 +49,58 @@ class StartPage extends StatelessWidget {
 
                     // Buttons
                     SizedBox(height: 24),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: CupertinoButton(
-                            onPressed: () {
-                              Get.to(MainPage());
-                            },
-                            color: Color(0xff212226),
-                            borderRadius: BorderRadius.circular(20),
-                            child: Text(
-                              "Sign Up",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600,
+                    SizedBox(
+                      height: 55,
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: CupertinoButton(
+                              onPressed: () {
+                                Get.to(MainPage());
+                              },
+                              color: Color(0xff212226),
+                              borderRadius: BorderRadius.circular(20),
+                              child: Text(
+                                "Sign Up",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 18,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        SizedBox(width: 10),
-                        Expanded(
-                          child: CupertinoButton(
-                            onPressed: () {
-                              Get.to(MainPage());
-                            },
-                            child: Container(),
+                          SizedBox(width: 10),
+                          Expanded(
+                            child: CupertinoButton(
+                              padding: EdgeInsets.zero,
+                              onPressed: () {
+                                Get.to(MainPage());
+                              },
+                              child: Container(
+                                height: 52,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(18),
+                                  border: Border.all(
+                                    color: Color(0xff212226),
+                                    width: 2,
+                                  ),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "Sign In",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
