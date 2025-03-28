@@ -1,5 +1,8 @@
+import 'package:d4_7_11/pages/main_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class StartPage extends StatelessWidget {
   const StartPage({super.key});
@@ -51,11 +54,25 @@ class StartPage extends StatelessWidget {
                       children: [
                         Expanded(
                           child: CupertinoButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.to(MainPage());
+                            },
                             color: Color(0xff212226),
+                            borderRadius: BorderRadius.circular(20),
                             child: Text(
                               "Sign Up",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                              ),
                             ),
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        Expanded(
+                          child: CupertinoButton(
+                            onPressed: () {},
+                            child: Container(),
                           ),
                         ),
                       ],
