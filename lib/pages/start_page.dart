@@ -56,7 +56,7 @@ class StartPage extends StatelessWidget {
                           Expanded(
                             child: CupertinoButton(
                               onPressed: () {
-                                Get.to(MainPage());
+                                Get.off(MainPage());
                               },
                               color: Color(0xff212226),
                               borderRadius: BorderRadius.circular(20),
@@ -75,7 +75,7 @@ class StartPage extends StatelessWidget {
                             child: CupertinoButton(
                               padding: EdgeInsets.zero,
                               onPressed: () {
-                                Get.to(MainPage());
+                                Get.off(MainPage());
                               },
                               child: Container(
                                 height: 52,
